@@ -65,4 +65,4 @@ Para requisições POST, PUT, DELETE, adicione o token CSRF ou desative temporar
     GET | /usuarios/{id} | Ver um usuário
     PUT | /usuarios/{id} | Atualizar usuário
     DELETE | /usuarios/{id} | Deletar usuário
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
