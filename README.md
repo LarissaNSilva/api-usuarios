@@ -20,69 +20,49 @@ Esta é uma API RESTful desenvolvida com Laravel para gerenciamento de usuários
 
 ## 🚀 Instalação e Configuração
 
-    Clone o repositório:
+Clone o repositório:
 
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+    git clone https://github.com/LarissaNSilva/api-usuarios.git
 
-    Instale as dependências:
 
-composer install
+Instale as dependências:
 
-    Crie o arquivo .env:
+    composer install
 
-cp .env.example .env
+Crie o arquivo .env, se não existir:
 
-    Configure o arquivo .env com suas credenciais do banco de dados:
+    cp .env.example .env
 
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=laravel
-DB_USERNAME=root
-DB_PASSWORD=
+Configure o arquivo .env com suas credenciais do banco de dados:
 
-    Gere a chave da aplicação:
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=laravel
+    DB_USERNAME=root
+    DB_PASSWORD=
 
-php artisan key:generate
+Gere a chave da aplicação:
 
-    Crie o banco de dados (se ainda não existir) e execute as migrations:
+    php artisan key:generate
 
-php artisan migrate
+Crie o banco de dados (se ainda não existir) e execute as migrations:
 
-    Inicie o servidor de desenvolvimento:
+    php artisan migrate
 
-php artisan serve
+Inicie o servidor de desenvolvimento:
 
-A API estará disponível em: http://127.0.0.1:8000
+    php artisan serve
+    
+Para requisições POST, PUT, DELETE, adicione o token CSRF ou desative temporariamente para testes em routes/web.php.
 
-## Laravel Sponsors
+## 📡 Rotas da API
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
+    Método | Endpoint | Ação
+    GET | /csrf-token | Obter Token
+    GET | /usuarios | Listar usuários
+    POST | /usuarios | Criar usuário
+    GET | /usuarios/{id} | Ver um usuário
+    PUT | /usuarios/{id} | Atualizar usuário
+    DELETE | /usuarios/{id} | Deletar usuário
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
